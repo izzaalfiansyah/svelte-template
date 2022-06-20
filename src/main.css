@@ -1,0 +1,86 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.card {
+  @apply bg-white rounded p-5 shadow mb-3;
+}
+
+.btn {
+  @apply bg-gray-400 shadow rounded px-5 py-1.5 text-white outline-none transition hover:bg-gray-500 focus:(ring ring-gray-300) font-semibold;
+}
+
+.btn[color=blue] {
+  @apply bg-blue-500 hover:bg-blue-600 focus:ring-blue-300;
+}
+
+.btn[color=red] {
+  @apply bg-red-500 hover:bg-red-600 focus:ring-red-300;
+}
+
+.icon {
+  @apply text-gray-500 rounded-full h-8 w-8 hover:bg-gray-100 transition font-semibold;
+}
+
+.icon[color=blue] {
+  @apply text-blue-500 hover:bg-blue-100;
+}
+
+.icon[color=red] {
+  @apply text-red-500 hover:bg-red-100;
+}
+
+.input[type=text],
+.input[type=password],
+.input[type=email],
+.input[type=number],
+.input[type=date],
+.input[type=tel],
+.input[type=url],
+.input[type=search],
+.input[type=time],
+.input[type=datetime-local],
+.input[type=month],
+.input[type=week],
+.input[type=file],
+select.input,
+textarea.input {
+  @apply block mb-3 mt-1 shadow-sm border-gray-300 border rounded h-10 px-2 outline-none w-full transition focus:(border-indigo-300 ring-2 ring-indigo-300 ring-opacity-50) focus:invalid:(border-red-400 ring-red-300 ring-opacity-50);
+}
+
+/* .input[type=radio],
+.input[type=checkbox] {
+  @apply h-4 w-4 rounded-xl border-transparent;
+} */
+
+textarea.input {
+  @apply h-auto resize-none py-2;
+}
+
+.table {
+  @apply p-2 border-collapse w-full whitespace-nowrap overflow-hidden;
+  line-height: 1.5;
+}
+
+.table td, .table th {
+  @apply px-4 py-2 border-b border-gray-200 text-left;
+}
+
+.table tbody tr {
+  @apply transition hover:bg-gray-50;
+}
+
+.skeleton {
+  @apply bg-gray-100;
+  animation: skeleton 1s ease-in infinite alternate-reverse;
+}
+
+@keyframes skeleton {
+  from {
+    @apply bg-gray-100;
+  }
+  to {
+    @apply bg-gray-300;
+  }
+}
